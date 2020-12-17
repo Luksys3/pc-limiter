@@ -1,4 +1,4 @@
-;#RequireAdmin
+#RequireAdmin
 #include "libraries/WinHttp.au3"
 
 #include <AutoItConstants.au3>
