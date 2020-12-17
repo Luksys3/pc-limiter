@@ -1,4 +1,4 @@
-#RequireAdmin
+;#RequireAdmin
 #include "libraries/WinHttp.au3"
 
 #include <AutoItConstants.au3>
@@ -68,7 +68,7 @@ While (true):
 WEnd
 
 Func getStatus()
-   Return HttpGet("https://link.eu/api/limiter")
+   Return HttpGet("https://-------.eu/api/limiter/")
 EndFunc
 
 Func block()
