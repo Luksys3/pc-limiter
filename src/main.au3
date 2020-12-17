@@ -1,4 +1,4 @@
-#RequireAdmin
+;#RequireAdmin
 #include "libraries/WinHttp.au3"
 
 #include <AutoItConstants.au3>
@@ -10,7 +10,7 @@
 
 Global Const $startupName = "pc-limiter.exe"
 Global Const $productionName = "pc-limiter-PRODUCTION.exe"
-Global $countdownMinutes = 5
+Global $countdownMinutes = 0.1
 
 ; For monitor on/off
 Global Const $lciWM_SYSCommand = 274
@@ -69,7 +69,7 @@ While (true):
 WEnd
 
 Func getStatus()
-   Return HttpGet("https://-------.eu/api/limiter/")
+   Return HttpGet("https://------.eu/api/limiter/")
 EndFunc
 
 Func block()
@@ -81,7 +81,7 @@ Func block()
 EndFunc
 
 Func unblock()
-   $status == "UNBLOCKED"
+   $status = "UNBLOCKED"
 
    clearText()
    Send("{VOLUME_MUTE}")
