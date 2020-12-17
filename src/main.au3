@@ -1,4 +1,4 @@
-;#RequireAdmin
+#RequireAdmin
 #include "libraries/WinHttp.au3"
 
 #include <AutoItConstants.au3>
@@ -36,14 +36,15 @@ Else
 EndIf
 
 While (true):
-   Local $webStatus = getStatus()
-   ConsoleWrite($webStatus)
+   Local $webStatus = StringLeft(getStatus(), 1)
+   ConsoleWrite("'" & $webStatus & "' ")
 
-   If $webStatus == 1 AND $status == "UNBLOCKED" Then
+   If $webStatus == "1" AND $status == "UNBLOCKED" Then
+	  ConsoleWrite('begin')
 	  beginCountdown()
    EndIf
 
-   If $webStatus <> 1 AND $status <> "UNBLOCKED" Then
+   If $webStatus <> "1" AND $status <> "UNBLOCKED" Then
 	  unblock()
    EndIf
 
