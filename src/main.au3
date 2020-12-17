@@ -10,7 +10,7 @@
 
 Global Const $startupName = "pc-limiter.exe"
 Global Const $productionName = "pc-limiter-PRODUCTION.exe"
-Global $countdownMinutes = 0.1
+Global $countdownMinutes = 5
 
 ; For monitor on/off
 Global Const $lciWM_SYSCommand = 274
